@@ -92,7 +92,6 @@ df = pd.read_csv(url)
 
 
 st.title("Welcome to the Israeli Deep-tech company index")
-st.dataframe(df)
 
 # Infer basic colDefs from dataframe types
 gb = GridOptionsBuilder.from_dataframe(df)
@@ -159,9 +158,9 @@ grid_response = AgGrid(
     width='100%',
     data_return_mode=return_mode_value,
     update_mode=update_mode_value,
-    fit_columns_on_grid_load=fit_columns_on_grid_load,
+    fit_columns_on_grid_load=True,
     allow_unsafe_jscode=True,  # Set it to True to allow jsfunction to be injected
-    enable_enterprise_modules=enable_enterprise_modules,
+    enable_enterprise_modules=False,
 )
 
 df = grid_response['data']
@@ -190,7 +189,6 @@ st.table(grid_response['selected_rows'])
 
 st.write(grid_response)
 btn = st.button(label="Create", on_click=createanodelist, args=(str(grid_response['selected_rows'][0]['record timestamp']), ))
-st.table(st.session_state.anodelist)
 
 # This section the the plot
 # st.header("Component Outputs - Example chart")
