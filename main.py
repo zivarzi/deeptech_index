@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
-import pillow
-import streamlit-aggrid
+
 
 sheet_id = "1icwHkuyE9YUKMVwgwwdYM7iGJrKRV8cOBccCtN5UzV8"
 sheet_name = "רשימת חברות"
