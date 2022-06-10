@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import google_spreadsheet
 
 
 sheet_id = "1icwHkuyE9YUKMVwgwwdYM7iGJrKRV8cOBccCtN5UzV8"
