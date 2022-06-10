@@ -94,7 +94,6 @@ df = pd.read_csv(url)
 st.title("Welcome to the Israeli Deep-tech company index")
 st.dataframe(df)
 
-st.write(df.columns)
 # Infer basic colDefs from dataframe types
 gb = GridOptionsBuilder.from_dataframe(df)
 
